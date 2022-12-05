@@ -31,8 +31,8 @@ namespace MatcoSender
             try
             {
                 _clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                IPAddress ipAddress = IPAddress.Parse("172.16.60.10");
-                IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 60050);
+                IPAddress ipAddress = IPAddress.Parse("172.16.4.11");
+                IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 60060);
                 _clientSocket.BeginConnect(localEndPoint, new AsyncCallback(ConnectCallback), null);
             }
             catch (Exception ex)
